@@ -1,0 +1,260 @@
+.info-slider {
+    position: fixed;
+    left: -100%;
+    width: 290px;
+    height: 100%;
+    background-color: var(--background);
+    overflow-y: auto;
+    text-align: center;
+    transition: all 0.25s ease-in;
+    z-index: 999;
+}
+
+.info-slider--activo {
+    left: 0;
+    bottom: 0;
+}
+
+.info-slide .info-slider__header {
+    position: fixed;
+    width: 290px;
+    height: 235px;
+    background-image: linear-gradient(159deg, rgba(37, 37, 50, .98) 0%, rgba(35, 35, 45, .98) 100%);
+    z-index: 99999;
+}
+
+.info-slider .info-slider__header .nav-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 15px;
+}
+
+.info-slider .avatar {
+    position: absolute;
+    top: 30px;
+    left: calc(50% - 45px);
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+}
+
+.info-slider .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.info-slider h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.075rem;
+    color: var(--just-white);
+    padding-top: 65px
+}
+
+.info-slider p {
+    font-size: 1.3rem;
+    color: var(--grey-negative);
+    padding-top: 12px;
+}
+
+.info-slide__data {
+    padding: 0 30px;
+}
+
+.info-slide__data ul {
+    font-size: 1.3rem;
+    border-bottom: 1px solid var(--grey-negative);
+    padding: 15px 0;
+}
+
+.info-slide__data ul li {
+    display: flex;
+    justify-content: space-between;
+    line-height: 3rem;
+}
+
+.info-slide__data h6 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--just-white);
+}
+
+.info-slide__data span {
+    color: var(--grey-negative);
+}
+
+.info-slide__language {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--grey-negative);
+    width: 230px;
+    padding: 10px 0 20px 0;
+    margin: 0 auto;
+}
+
+.language-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle1 {
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-ingles {
+    background: linear-gradient(360deg, #191923 50%, var(--yellow-cv) 50%);
+}
+
+.language-japones--derecha {
+    background: linear-gradient(-30deg, #191923 50%, var(--yellow-cv) 50%);
+}
+
+.circle2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-japones--izquierda {
+    background: linear-gradient(30deg, transparent 50%, var(--yellow-cv) 50%);
+}
+
+.circulo-tapa {
+    width: 37.5px;
+    height: 37.5px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--just-white);
+    background: var(--background);
+}
+
+.language {
+    font-size: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: var(--just-white);
+}
+
+.circulo-tapa__porcentaje {
+    padding-bottom: 10px;
+    font-size: 1.3rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.info-slide__skill {
+    width: 230px;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--grey-negative);
+}
+
+.skill-container {
+    width: 100%;
+    padding: 15px 0;
+}
+
+.skill-container__detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-container span {
+    font-family: 'Poppins', sans-serif;
+    color: var(--just-white);
+    font-size: 1.3rem;
+}
+
+.progresive-bar {
+    width: 230px;
+    height: 5px;
+    margin-top: 3px;
+    background-color: #191923;
+}
+
+.progresive-bar__porcent {
+    height: 5px;
+    background-color: var(--yellow-cv);
+}
+
+.bar--html {
+    animation: progresive-html 3s;
+    animation-fill-mode: both;
+    animation-delay: 500ms;
+    animation-timing-function: ease-out;
+}
+
+.bar--css {
+    animation: progresive-css 3s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+}
+
+.bar--js {
+    animation: progresive-js 3s;
+    animation-fill-mode: both;
+    animation-delay: 1.5s;
+    animation-timing-function: ease-out;
+}
+
+.bar--reactJS {
+    animation: progresive-reactJS 3s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes progresive-html {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 95%;
+    }
+}
+
+@keyframes progresive-css {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 92%;
+    }
+}
+
+@keyframes progresive-js {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 73%;
+    }
+}
+
+@keyframes progresive-reactJS {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 73%;
+    }
+}
