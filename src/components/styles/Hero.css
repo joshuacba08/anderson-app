@@ -1,0 +1,79 @@
+.hero {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: 542px;
+    padding: 0 15px;
+}
+
+.hero-container {
+    width: 100%;
+    min-width: 290px;
+    height: 100%;
+    background-image: url('../../assets/images/Miyayima.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-container .hero-container__mask {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 60px 30px;
+    background-image: linear-gradient(90deg, rgba(45, 45, 58, .9) 15%, rgba(45, 45, 58, .7) 50%, rgba(43, 43, 53, .7) 100%);
+}
+
+.hero .hero__title {
+    margin-bottom: 16px;
+    font-size: 4.6rem;
+    line-height: 5rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--just-white);
+}
+
+.hero .hero__text {
+    font-size: 1.6rem;
+    color: var(--just-white);
+}
+
+.hero .hero__text span {
+    color: var(--yellow-cv);
+}
+
+.hero .hero__text span::before {
+    content: "<";
+}
+
+.hero .hero__text span::after {
+    content: ">";
+}
+
+.hero .hero__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 45px;
+    margin-top: 1.6rem;
+    cursor: pointer;
+    background-color: var(--yellow-cv);
+}
+
+.hero .hero__button:hover {
+    transform: translateY(-2px);
+    color: #1e1e28;
+}
+
+.hero .hero__button a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: #000000;
+}

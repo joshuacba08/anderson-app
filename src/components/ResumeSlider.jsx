@@ -4,8 +4,9 @@ import avatar from '../assets/images/Josue_Oroya.png';
 import './styles/ResumeSlider.css'
 
 const ResumeSlider = () => {
-
-    const [show, setShow] = useState(false);
+    
+    /*Renderizado condicional*/
+    const [show, setShow] = useState(true);
 
     const handleClick = () => {
         setShow(!show);
