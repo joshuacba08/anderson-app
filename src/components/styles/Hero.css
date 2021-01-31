@@ -37,20 +37,20 @@
 }
 
 .hero .hero__text {
+    display: flex;
     font-size: 1.6rem;
     color: var(--just-white);
 }
 
-.hero .hero__text span {
+
+.hero .Typewriter::before {
     color: var(--yellow-cv);
+    content: "<code>";
 }
 
-.hero .hero__text span::before {
-    content: "<";
-}
-
-.hero .hero__text span::after {
-    content: ">";
+.hero .Typewriter::after {
+    color: var(--yellow-cv);
+    content: "</code>";
 }
 
 .hero .hero__button {
