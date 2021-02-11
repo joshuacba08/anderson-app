@@ -11,6 +11,7 @@
 
 .slide-menu--activo {
     right: 0;
+    top:0;
 }
 
 .slide-menu__bar {

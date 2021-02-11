@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect";
 
 import './styles/Hero.css'
 
-const Hero = prop => {
+const Hero = () => {
 
 
 
@@ -12,21 +12,24 @@ const Hero = prop => {
         <section className="hero">
             <div className="hero-container">
                 <div className="hero-container__mask">
-                    <h2 className="hero__title">Discover my Amazing Art Space!</h2>
-                        <p className="hero__text"> 
-                            <Typewriter 
+                    <div className="content">
+                        <p className="content__intro">Hi, my name is</p>
+                        <h2 className="hero__title">Anderson Oroya.</h2>
+                        <p className="hero__text">
+                            <Typewriter
                                 onInit={typewriter => {
                                     typewriter
-                                        .typeString("Hello World!")
+                                        .typeString("I'm Front-End Developer")
                                         .pauseFor(2000)
                                         .deleteAll()
-                                        .typeString(" Desarrollo páginas web para impulsar el crecimiento de tu negocio. ")
+                                        .typeString(" Desarrollo páginas web para impulsar el crecimiento de tu negocio.")
                                         .start();
                                 }}
                             />
                         </p>
-                    <div className="hero__button">
-                        <a href="/">CONOCEME</a>
+                        <div className="hero__button">
+                            <a href="/">CONOCEME</a>
+                        </div>
                     </div>
                 </div>
             </div>

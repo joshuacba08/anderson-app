@@ -9,7 +9,7 @@ const Home = () => {
         <>
             <BarNav />
             <main className="main-container">
-                <Hero value="Hola"/>
+                <Hero />
             </main>
         </>
     )

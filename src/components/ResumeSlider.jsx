@@ -14,7 +14,9 @@ const ResumeSlider = () => {
 
     return (
         show ? <i className="icon--option background-image pointer" onClick={handleClick}>
-                    </i>:  
+                    </i>:
+                <>
+                    <i className="icon--option background-image pointer" onClick={handleClick}></i>  
         <section className="info-slider info-slider--activo">
             <article className="info-slider__header">
                 <div className="nav-bar">
@@ -24,10 +26,11 @@ const ResumeSlider = () => {
                 <figure className="avatar">
                     <img src={avatar} alt=""/>
                 </figure>
+                <div className="pulseAnim"></div>
                 <h1>Josué Oroya</h1>
                 <p>Front End Developer Jr.</p>
             </article>
-            <article class="info-slide__data">
+            <article className="info-slide__data">
                 <ul>
                     <li>
                         <h6>Residence:</h6>
@@ -43,67 +46,78 @@ const ResumeSlider = () => {
                     </li>
                 </ul>
             </article>
-            <article class="info-slide__language">
-                <div class="language-box">
-                    <div class="circle1 language-ingles">
-                        <div class="circle2 language-ingles">
-                            <div class="circulo-tapa">
-                                <span class="circulo-tapa__porcentaje">50%</span>
+            <article className="info-slide__language">
+                <div className="language-box">
+                    <div className="circle1 language-ingles">
+                        <div className="circle2 language-ingles">
+                            <div className="circulo-tapa">
+                                <span className="circulo-tapa__porcentaje">50%</span>
                             </div>
                         </div>
                     </div>
-                    <span class="language">ENGLISH</span>
+                    <span className="language">ENGLISH</span>
                 </div>
-                <div class="language-box">
-                    <div class="circle1 language-japones--derecha">
-                        <div class="circle2 language-japones--izquierda">
-                            <div class="circulo-tapa">
-                                <span class="circulo-tapa__porcentaje">65%</span>
+                <div className="language-box">
+                    <div className="circle1 language-japones--derecha">
+                        <div className="circle2 language-japones--izquierda">
+                            <div className="circulo-tapa">
+                                <span className="circulo-tapa__porcentaje">65%</span>
                             </div>
                         </div>
                     </div>
-                    <span class="language">JAPANESE</span>
+                    <span className="language">JAPANESE</span>
+                </div>
+                <div className="language-box">
+                    <div className="circle1 language-spanish--derecha">
+                        <div className="circle2 language-spanish--izquierda">
+                            <div className="circulo-tapa">
+                                <span className="circulo-tapa__porcentaje">100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span className="language">SPANISH</span>
                 </div>
             </article>
-            <article class="info-slide__skill">
-                <div class="skill-container">
-                    <div class="skill-container__detail">
+            <article className="info-slide__skill">
+                <div className="skill-container">
+                    <div className="skill-container__detail">
                         <span>HTML</span>
-                        <span>95%</span>
+                        <span>100%</span>
                     </div>
-                    <div class="progresive-bar">
-                        <div class="progresive-bar__porcent bar--html"></div>
+                    <div className="progresive-bar">
+                        <div className="progresive-bar__porcent bar--html"></div>
                     </div>
                 </div>
-                <div class="skill-container">
-                    <div class="skill-container__detail">
+                <div className="skill-container">
+                    <div className="skill-container__detail">
                         <span>CSS</span>
-                        <span>92%</span>
+                        <span>97%</span>
                     </div>
-                    <div class="progresive-bar">
-                        <div class="progresive-bar__porcent bar--css"></div>
+                    <div className="progresive-bar">
+                        <div className="progresive-bar__porcent bar--css"></div>
                     </div>
                 </div>
-                <div class="skill-container">
-                    <div class="skill-container__detail">
+                <div className="skill-container">
+                    <div className="skill-container__detail">
                         <span>JS</span>
-                        <span>73%</span>
+                        <span>93%</span>
                     </div>
-                    <div class="progresive-bar">
-                        <div class="progresive-bar__porcent bar--js"></div>
+                    <div className="progresive-bar">
+                        <div className="progresive-bar__porcent bar--js"></div>
                     </div>
                 </div>
-                <div class="skill-container">
-                    <div class="skill-container__detail">
+                <div className="skill-container">
+                    <div className="skill-container__detail">
                         <span>React JS</span>
-                        <span>67%</span>
+                        <span>85%</span>
                     </div>
-                    <div class="progresive-bar">
-                        <div class="progresive-bar__porcent bar--reactJS"></div>
+                    <div className="progresive-bar">
+                        <div className="progresive-bar__porcent bar--reactJS"></div>
                     </div>
                 </div>
             </article>
         </section>
+    </>
     )
 }
 

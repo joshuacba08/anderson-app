@@ -1,18 +1,15 @@
 .info-slider {
     position: fixed;
-    left: -100%;
     width: 290px;
     height: 100%;
     background-color: var(--background);
     overflow-y: auto;
     text-align: center;
-    transition: all 0.25s ease-in;
     z-index: 999;
-}
-
-.info-slider--activo {
-    left: 0;
     bottom: 0;
+    animation-name: active-left;
+    animation-duration: .42s;
+    animation-timing-function: ease-out;
 }
 
 .info-slide .info-slider__header {
@@ -39,6 +36,20 @@
     width: 90px;
     height: 90px;
     margin: 0 auto;
+}
+
+.pulseAnim {
+    display: block;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    left: calc(50% - -22px);
+    top: 98px;
+    border-radius: 50%;
+    background: var(--yellow-cv);
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(255, 193, 7, 0.4);
+    animation: pulseAnim 2s infinite;
 }
 
 .info-slider .avatar img {
@@ -136,6 +147,14 @@
     background: linear-gradient(30deg, transparent 50%, var(--yellow-cv) 50%);
 }
 
+.language-spanish--izquierda {
+    background: linear-gradient(30deg, transparent 50%, var(--yellow-cv) 50%);
+}
+
+.language-spanish--derecha {
+    background: linear-gradient(210deg, #191923 50%, var(--yellow-cv) 50%);
+}
+
 .circulo-tapa {
     width: 37.5px;
     height: 37.5px;
@@ -223,12 +242,33 @@
     animation-timing-function: ease-out;
 }
 
+@keyframes active-left {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes pulseAnim {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(88, 120, 243, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(88, 120, 243, 0);
+    }
+}
+
 @keyframes progresive-html {
     0% {
         width: 0%;
     }
     100% {
-        width: 95%;
+        width: 100%;
     }
 }
 
@@ -237,7 +277,7 @@
         width: 0%;
     }
     100% {
-        width: 92%;
+        width: 97%;
     }
 }
 
@@ -246,7 +286,7 @@
         width: 0%;
     }
     100% {
-        width: 73%;
+        width: 93%;
     }
 }
 
@@ -255,6 +295,6 @@
         width: 0%;
     }
     100% {
-        width: 73%;
+        width: 85%;
     }
 }
