@@ -1,4 +1,5 @@
 import React from 'react';
+import AboutMe from '../components/AboutMe';
 import BarNav from '../components/BarNav';
 import Hero from '../components/Hero';
 
@@ -10,6 +11,7 @@ const Home = () => {
             <BarNav />
             <main className="main-container">
                 <Hero />
+                <AboutMe />
             </main>
         </>
     )

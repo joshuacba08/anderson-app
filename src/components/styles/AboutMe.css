@@ -1,0 +1,77 @@
+.about-me {
+    position: relative;
+    width: 100%;
+    padding: 20px 15px;
+    margin-top: 20px;
+}
+
+.about-me__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me__title {
+    display: flex;
+    align-items: center;
+    color: var(--just-white);
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 20px;
+}
+
+.about-me__card {
+    background-image: var(--black-box);
+    max-width: 700px;
+    padding: 30px;
+    box-shadow: var(--shadow-card);
+}
+
+.about-me__card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+.about-me__technologies {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    margin: 20px 0 0;
+    overflow: hidden;
+    font-size: 1.3rem;
+    justify-content: center;
+}
+
+.about-me__technologies .item::before {
+    content: '▹';
+    color: var(--yellow-cv);
+    font-size: 1.6rem;
+    padding-right: 5px;
+    line-height: 12px;
+}
+
+.about-me__photo-profile {
+    margin: 20px 0px;
+    min-width: 180px;
+    max-width: 300px;
+    height: auto;
+    box-shadow: var(--shadow-card);
+    border-radius: 5px;
+    filter: sepia(30);
+    transition: all 200ms ease-in;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.about-me__photo-profile:hover {
+    filter: none;
+}
+
+.about-me__photo-profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.about-me__photo-profile img:hover {
+    animation: zoom 6s ease-in;
+}
