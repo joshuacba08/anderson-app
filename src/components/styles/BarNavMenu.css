@@ -45,8 +45,6 @@
     height: 100%;
     padding: 30px;
     line-height: 4rem;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
     background-color: #20202a;
 }
 
@@ -56,11 +54,21 @@
 }
 
 .main-menu-slide a {
-    color: var(--just-white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
     text-decoration: none;
     cursor: pointer;
 }
 
 .main-menu-slide a:hover {
     text-decoration: underline;
+}
+
+.no-selected {
+    color: var(--grey-negative);
+}
+
+.selected {
+    color: var(--just-white);
 }

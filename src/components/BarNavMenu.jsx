@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import './styles/BarNavMenu.css';
 
@@ -24,16 +25,16 @@ const BarNavMenu = () => {
             <nav className="main-menu-slide">
                 <ul>
                     <li>
-                        <a href="/">HOME</a>
+                        <NavLink exact to='/' activeClassName="selected" className="no-selected" onClick={handleClick}>INICIO</NavLink>
                     </li>
                     <li>
-                        <a href="/">PORTFOLIO</a>
+                        <NavLink to='/' activeClassName="selected" className="no-selected" onClick={handleClick}>PORTFOLIO</NavLink>
                     </li>
                     <li>
-                        <a href="/">BLOG</a>
+                        <NavLink to='/' activeClassName="selected" className="no-selected" onClick={handleClick}>BLOG</NavLink>
                     </li>
                     <li>
-                        <a href="/">CONTACT</a>
+                        <NavLink to='/contact' activeClassName="selected" className="no-selected" onClick={handleClick}>CONTACT</NavLink>
                     </li>
                 </ul>
             </nav>

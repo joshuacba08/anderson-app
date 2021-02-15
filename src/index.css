@@ -8,7 +8,6 @@
   --black-box: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
   /*effects*/
   --shadow-card: 0 3px 8px 0 rgb(15 15 20 / 20%);
-  
 }
 
 ::-webkit-scrollbar {
@@ -44,9 +43,8 @@ body {
 
 .main-container {
   width: 100%;
-  min-height: calc(100vh - 70px);
-  height: auto;
-  padding-top: 50px;
+  min-height: calc(100vh - 140px);
+  height: 100%;
   min-width: 320px;
   background-image: url('./assets/images/Miyayima.jpg');
   background-size: cover;
@@ -54,6 +52,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
+  /* position: absolute; */
+  /* z-index: -1; */
 }
 
 .main-container:before {
