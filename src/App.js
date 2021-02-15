@@ -25,11 +25,6 @@ function App() {
 
       <Footer />
     </BrowserRouter>
-    // <div>
-    //   <main className="main-container">hlola</main>
-    //   <Home />
-    // </div>
-    
   )
 }
 
