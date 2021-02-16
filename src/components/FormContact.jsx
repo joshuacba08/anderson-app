@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 import validator from 'validator';
 import useForm from '../Hooks/useForm';
+import { getFirestore } from '../data/importData'
+// import firebase from 'firebase/app';
 import './styles/FormContact.css'
 
 const FormContact = () => {
+
+    //obtención de datos
+    const db = getFirestore();
 
     //validación del formulario
     const [error, setError] = useState(false);
@@ -14,12 +19,19 @@ const FormContact = () => {
         message: '',
     });
     const { name, email, message } = formValues;
+    const [state, setState] = useState(false);
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         if (isFormValid()) {
+
+            db.collection('messages').add(formValues)
+                .then( () => {
+                    setState(true);
+                })
+                .catch(e => console.log(e));
 
             console.log("Validado");
 
@@ -49,57 +61,61 @@ const FormContact = () => {
     
 
     return (
-        <form onSubmit={handleSubmit} className="form">
-            <div className="form-container">
-                {error && <small>{errMessage}</small>}
-                <div className="form-control">
-                    <label htmlFor="name">
-                        <i className="icon icon-name"></i>
-                    </label>
-                    <input 
-                        className="input"
-                        name="name" 
-                        type="text" 
-                        placeholder="Name" 
-                        autoComplete="off"
-                        value={name}
-                        onChange={handleInputChange}
-                    />
+        <>{
+            !state ?
+            <form onSubmit={handleSubmit} className="form">
+                <div className="form-container">
+                    {error && <small>{errMessage}</small>}
+                    <div className="form-control">
+                        <label htmlFor="name">
+                            <i className="icon icon-name"></i>
+                        </label>
+                        <input 
+                            className="input"
+                            name="name" 
+                            type="text" 
+                            placeholder="Name" 
+                            autoComplete="off"
+                            value={name}
+                            onChange={handleInputChange}
+                        />
+                    </div>
+                    <div className="form-control">
+                        <label htmlFor="email">
+                            <i className="icon icon-email"></i>
+                        </label>
+                        <input 
+                            className="input" 
+                            name="email"
+                            type="text" 
+                            placeholder="Email"
+                            autoComplete="off"
+                            value={email}
+                            onChange={handleInputChange} 
+                        />
+                    </div>
+                    <div className="form-control">
+                        <label className="label--message" htmlFor="message">
+                            <div className="icon-container">
+                                <i className="icon icon-message"></i>
+                            </div>
+                        </label>
+                        <textarea 
+                            className="input" 
+                            name="message"
+                            type="text" 
+                            placeholder="Message" 
+                            rows="8"
+                            autoComplete="off"
+                            value={message}
+                            onChange={handleInputChange}
+                        />
+                    </div>
+                    <button type="submit">SEND MESSAGE</button>
                 </div>
-                <div className="form-control">
-                    <label htmlFor="email">
-                        <i className="icon icon-email"></i>
-                    </label>
-                    <input 
-                        className="input" 
-                        name="email"
-                        type="text" 
-                        placeholder="Email"
-                        autoComplete="off"
-                        value={email}
-                        onChange={handleInputChange} 
-                    />
-                </div>
-                <div className="form-control">
-                    <label className="label--message" htmlFor="message">
-                        <div className="icon-container">
-                            <i className="icon icon-message"></i>
-                        </div>
-                    </label>
-                    <textarea 
-                        className="input" 
-                        name="message"
-                        type="text" 
-                        placeholder="Message" 
-                        rows="8"
-                        autoComplete="off"
-                        value={message}
-                        onChange={handleInputChange}
-                    />
-                </div>
-                <button type="submit">SEND MESSAGE</button>
-            </div>
-        </form >
+            </form > :
+            <p className="message-confirm">Muchas gracias por dejar un mensaje 😊 te estaré respondiendo lo más antes posible. </p>
+        }</>
     )
 }
 

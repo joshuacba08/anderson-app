@@ -15,7 +15,7 @@ const Hero = () => {
                     <div className="content">
                         <p className="content__intro">Hi, my name is</p>
                         <h2 className="hero__title">Anderson Oroya.</h2>
-                        <p className="hero__text">
+                        <div className="hero__text">
                             <Typewriter
                                 onInit={typewriter => {
                                     typewriter
@@ -26,7 +26,7 @@ const Hero = () => {
                                         .start();
                                 }}
                             />
-                        </p>
+                        </div>
                         <div className="hero__button">
                             <a href="/">CONOCEME</a>
                         </div>

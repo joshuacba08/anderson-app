@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <BarNav />
-      <div className="main-container">
+      <main className="main-container">
         <Switch>
           <Route exact path="/">
             <Home />
@@ -21,7 +21,7 @@ function App() {
           </Route>
 
         </Switch>
-      </div>
+      </main>
 
       <Footer />
     </BrowserRouter>
