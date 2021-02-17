@@ -28,10 +28,10 @@ const BarNavMenu = () => {
                         <NavLink exact to='/' activeClassName="selected" className="no-selected" onClick={handleClick}>INICIO</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/' activeClassName="selected" className="no-selected" onClick={handleClick}>PORTFOLIO</NavLink>
+                        <NavLink to='/portfolio' activeClassName="selected" className="no-selected" onClick={handleClick}>PORTFOLIO</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/' activeClassName="selected" className="no-selected" onClick={handleClick}>BLOG</NavLink>
+                        <NavLink to='/blog' activeClassName="selected" className="no-selected" onClick={handleClick}>BLOG</NavLink>
                     </li>
                     <li>
                         <NavLink to='/contact' activeClassName="selected" className="no-selected" onClick={handleClick}>CONTACT</NavLink>

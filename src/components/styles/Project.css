@@ -1,0 +1,15 @@
+.project-container {
+    width: 284px;
+    height: 190px;
+}
+
+.image-container {
+    width: 284px;
+    height: 190px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
