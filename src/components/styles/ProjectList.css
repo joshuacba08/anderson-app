@@ -2,7 +2,7 @@
     width: 100%;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, 270px);
+    grid-template-columns: repeat(auto-fill, 290px);
     gap: 30px;
     padding: 20px;
 }

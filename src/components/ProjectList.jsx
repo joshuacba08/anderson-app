@@ -16,10 +16,13 @@ const ProjectList = ({ category }) => {
 
     }, [ category ]);
 
+
+
     return (
         <>
             {
                 items ?
+                    
                     <div className="item-list-container">
                         {
                             items.map((project) => {
@@ -28,13 +31,17 @@ const ProjectList = ({ category }) => {
                                     <Project 
                                         name = { project.data.name }
                                         description = { project.data.description }
+                                        github = { project.data.github }
                                         image= { project.data.image }
-                                        tecnologies= { project.data.technologies }
+                                        link = { project.data.link }
+                                        technologies= { project.data.technologies }
                                     />
                                 </div>
                             })
                         }
-                    </div> :
+                        {items.lenght === 0 && <p>hola</p>}
+                    </div> 
+                    :
                     <div className="loading-container">
                         <p className="loading">Cargando productos...</p>
                     </div>

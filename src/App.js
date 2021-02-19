@@ -7,6 +7,7 @@ import Portfolio from "./pages/Portfolio";
 
 import './App.css';
 import Error404 from "./pages/Error404";
+import Blog from "./pages/Blog";
 
 
 
@@ -24,6 +25,10 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact />
+          </Route>
+
+          <Route path="/blog">
+            <Blog />
           </Route>
 
           <Route path="*">
