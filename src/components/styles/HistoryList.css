@@ -1,0 +1,27 @@
+.history-list-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-list-container::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    height: calc(100% - 50px);
+    width: 5px;
+    background: #191923;
+}
+
+.loading-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.loading-container p {
+    font-size: 2rem;
+    padding: 40px 0;
+}

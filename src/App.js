@@ -4,12 +4,11 @@ import BarNav from "./components/BarNav";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
-
-import './App.css';
 import Error404 from "./pages/Error404";
 import Blog from "./pages/Blog";
+import History from "./pages/History";
 
-
+import './App.css';
 
 function App() {
   return (
@@ -29,6 +28,10 @@ function App() {
 
           <Route path="/blog">
             <Blog />
+          </Route>
+
+          <Route path="/history">
+            <History />
           </Route>
 
           <Route path="*">

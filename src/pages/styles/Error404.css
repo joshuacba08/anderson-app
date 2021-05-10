@@ -10,7 +10,7 @@
 }
 
 .error-container {
-    color:var(--just-white);
+    color: var(--just-white);
 }
 
 .error-container span {
@@ -28,16 +28,9 @@
     height: 100%;
 }
 
-/* .error-container a {
-    color: var(--grey-negative);
-    
-}
-.error-container a { */
-
-/* } */
-
 .go-to-home, .error-container a {
     color: var(--grey-negative);
+    font-family: var(--poppins);
     cursor: pointer;
     font-size: 1.6rem;
     padding: 20px 0;

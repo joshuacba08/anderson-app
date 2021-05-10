@@ -28,4 +28,13 @@ footer {
 .footer-container :nth-child(2) {
     width: 65%;
     text-align: end;
+    color: var(--grey-active);
+    transform: all 0.3s ease;
+}
+
+.footer-container :nth-child(2):hover {
+    width: 65%;
+    text-align: end;
+    color: var(--just-white);
+
 }

@@ -6,7 +6,6 @@ import './styles/Project.css'
 const Project = ({ name, description, github, image, link, technologies }) => {
 
 
-    console.log(name);
     return (
                 <div className="project-container">
                     <div className="image-container">

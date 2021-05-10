@@ -7,8 +7,35 @@
     height: 100%;
     padding: 30px 0 50px;
     position: relative;
+    min-height: 400px;
 }
 
 .contact-container__title {
     padding-bottom: 30px;
+}
+
+.confirm-contact-container {
+    position: relative;
+    text-align: center;
+}
+
+.confirm-contact-container p {
+    padding-bottom: 30px;
+}
+
+.go-to-home, .confirm-contact-container a {
+    color: var(--grey-negative);
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 20px 0;
+    transition: all 0.25s ease;
+    text-decoration: underline;
+    padding-top: 30px;
+    font-family: var(--poppins);
+}
+
+.go-to-home:hover, .confirm-contact-container a:hover {
+    color: var(--just-white);
+    text-decoration: none;
+    transform: scale(1.1);
 }

@@ -7,7 +7,7 @@ const Footer = () => {
         <footer>
             <div className="footer-container">
                 <p>© 2021 Todos los derechos reservados</p>
-                <p>Email: anderson.oroya@gmail.com</p>
+                <a href="mailto:anderson.oroya@gmail.com">Email: anderson.oroya@gmail.com</a>
             </div>
         </footer>
     )

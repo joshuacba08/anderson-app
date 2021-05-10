@@ -18,12 +18,13 @@
 
 .portfolio__title {
     color: var(--just-white);
-    margin-bottom: 10px;
+    margin: 0 auto 15px;
 }
 
 .portfolio__navbar ul {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .portfolio__navbar ul li {
@@ -36,9 +37,10 @@
     cursor: pointer;
     transition: color 0.25s ease;
     text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--grey-negative);
 }

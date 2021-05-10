@@ -4,6 +4,7 @@ import useForm from '../Hooks/useForm';
 import { getFirestore } from '../data/importData'
 // import firebase from 'firebase/app';
 import './styles/FormContact.css'
+import { Link } from 'react-router-dom';
 
 const FormContact = () => {
 
@@ -114,7 +115,12 @@ const FormContact = () => {
                     <button type="submit">SEND MESSAGE</button>
                 </div>
             </form > :
-            <p className="message-confirm">Muchas gracias por dejar un mensaje 😊 te estaré respondiendo lo más antes posible. </p>
+            <div className="confirm-contact-container">
+                    <p className="message-confirm">Muchas gracias por dejar un mensaje 😊 te estaré respondiendo lo más antes posible. </p>
+                <Link exact to='/'>
+                    <span className="go-to-home">Volver a la página de inicio</span>
+                </Link>
+            </div>
         }</>
     )
 }

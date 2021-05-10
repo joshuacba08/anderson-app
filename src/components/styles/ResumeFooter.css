@@ -1,0 +1,31 @@
+.resume-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    /* margin: 20px 0; */
+    padding: 0 35px;
+    /* position: absolute;
+    bottom: 0;
+    z-index: 9999999; */
+    background-image: linear-gradient(159deg, rgba(37, 37, 50, .98) 0%, rgba(35, 35, 45, .98) 100%);
+}
+
+.icon--github {
+    background-image: url('../../assets/icons/github.svg');
+}
+
+.icon--codepen {
+    background-image: url('../../assets/icons/codepen.svg');
+    width: 25px;
+    height: 25px;
+}
+
+.icon--linkedin {
+    background-image: url('../../assets/icons/linkedin.svg');
+}
+
+.icon--twitter {
+    background-image: url('../../assets/icons/twitter.svg');
+}

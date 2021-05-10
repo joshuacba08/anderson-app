@@ -28,7 +28,10 @@ const BarNavMenu = () => {
                         <NavLink exact to='/' activeClassName="selected" className="no-selected" onClick={handleClick}>INICIO</NavLink>
                     </li>
                     <li>
-                        <NavLink to='/portfolio' activeClassName="selected" className="no-selected" onClick={handleClick}>PORTFOLIO</NavLink>
+                        <NavLink to='/portfolio/allProjects' activeClassName="selected" className="no-selected" onClick={handleClick}>PORTFOLIO</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/history' activeClassName="selected" className="no-selected" onClick={handleClick}>HISTORY</NavLink>
                     </li>
                     <li>
                         <NavLink to='/blog' activeClassName="selected" className="no-selected" onClick={handleClick}>BLOG</NavLink>

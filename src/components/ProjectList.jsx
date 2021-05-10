@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import Project from './Project';
-import { getAllProjects, getProjectByCategory } from '../helpers/searchFunctions';
+import onDev from '../assets/images/onDev.png';
+import { getAllProjects } from '../helpers/searchFunctions';
 
 import './styles/ProjectList.css';
 
-const ProjectList = ({ category }) => {
+const ProjectList = ({ searchFunction, field, value }) => {
 
     const [items, setItems] = useState(null);
 
     useEffect(() => {
        
-        category === 'allProjects' ? 
+        value === 'allProjects' ? 
             getAllProjects().then(response => setItems(response)) :
-            getProjectByCategory(category).then(response => setItems(response));
+            searchFunction(field, value).then(response => setItems(response));
 
-    }, [ category ]);
+    }, [ searchFunction, field,value ]);
 
 
 
@@ -39,12 +40,24 @@ const ProjectList = ({ category }) => {
                                 </div>
                             })
                         }
-                        {items.lenght === 0 && <p>hola</p>}
                     </div> 
                     :
-                    <div className="loading-container">
-                        <p className="loading">Cargando productos...</p>
-                    </div>
+                    <>
+                        { items === 0 && 
+                            <div className="portfolio__building-container">
+                                <h2>I'm developing interesting projects. Hope you can see them later.</h2>
+                                <div className="portfolio-image--building">
+                                    <img src={onDev} alt="a man programing" />
+                                </div>
+                            </div> 
+                        }
+                        
+                        { items !== 0 && 
+                            <div className="loading-container">
+                                <p className="loading">Loading projects...</p>
+                            </div>
+                        }
+                    </>
 
             }
         </>

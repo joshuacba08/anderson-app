@@ -53,6 +53,7 @@
     margin: 20px 0px;
     min-width: 180px;
     max-width: 300px;
+    width: 100%;
     height: auto;
     box-shadow: var(--shadow-card);
     border-radius: 5px;

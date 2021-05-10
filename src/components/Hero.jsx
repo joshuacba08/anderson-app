@@ -4,10 +4,6 @@ import './styles/Hero.css'
 
 const Hero = () => {
 
-
-
-
-
     return (
         <section className="hero">
             <div className="hero-container">
@@ -19,16 +15,16 @@ const Hero = () => {
                             <Typewriter
                                 onInit={typewriter => {
                                     typewriter
-                                        .typeString("I'm Front-End Developer")
+                                        .typeString("I'm a Front-End Developer based in Cordoba, Argentina.")
                                         .pauseFor(2000)
                                         .deleteAll()
-                                        .typeString(" Desarrollo páginas web para impulsar el crecimiento de tu negocio.")
+                                        .typeString("I build (and occasionally design) web interfaces.")
                                         .start();
                                 }}
                             />
                         </div>
                         <div className="hero__button">
-                            <a href="/">CONOCEME</a>
+                            <a href="#about-me">CONOCEME</a>
                         </div>
                     </div>
                 </div>

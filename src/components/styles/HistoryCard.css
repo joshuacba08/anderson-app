@@ -1,0 +1,72 @@
+.history-card-container {
+    max-width: 420px;
+    min-width: 290px;
+    box-shadow: var(--shadow-card);
+    margin: 30px 30px 0px;
+    padding: 20px;
+    background-image: var(--black-box);
+    position: relative;
+}
+
+.history-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.history-card__principal {
+    display: inline;
+    width: 50%;
+}
+
+.history-card__title {
+    display: inline;
+    width: 50%;
+}
+
+.history-card__date {
+    background-color: var(--background);
+    padding: 3px 8px;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+}
+
+.history-card__description {
+    font-family: var(--poppins);
+    font-size: 1.2rem;
+    padding: 12px 0;
+    width: 100%;
+    letter-spacing: 0.7px;
+    text-align: end;
+}
+
+.history-card__academy {
+    color:var(--yellow-cv);
+    font-size: 1.2rem;
+    font-family: var(--poppins);
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    text-align: end;
+}
+
+.history-card__type {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2px;
+    color: var(--yellow-cv);
+    text-transform: capitalize;
+}
+
+.mini-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid 3px var(--yellow-cv);
+    background: #1e1e28;
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    z-index: 2;
+}
+

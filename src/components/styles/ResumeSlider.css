@@ -13,7 +13,7 @@
     animation-timing-function: ease-out;
 }
 
-.info-slide .info-slider__header {
+.info-slider .info-slider__header {
     position: fixed;
     width: 290px;
     height: 235px;
@@ -71,6 +71,10 @@
     font-size: 1.3rem;
     color: var(--grey-negative);
     padding-top: 12px;
+}
+
+.data-container {
+    padding: 235px 30px 50px;
 }
 
 .info-slide__data {
@@ -241,6 +245,22 @@
     animation-fill-mode: both;
     animation-delay: 2s;
     animation-timing-function: ease-out;
+}
+
+.info-slide__download {
+    text-align: left;
+    padding: 15px 0 0;
+}
+
+.info-slide__download {
+    display: flex;
+    align-items: center;
+}
+
+.icon--download {
+    background-image: url('../../assets/icons/download.svg');
+    width: 15px;
+    height: 15px;
 }
 
 @keyframes active-left {
